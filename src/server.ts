@@ -4,12 +4,15 @@ import helmet from "helmet";
 import { getConfig } from "./config";
 import { createRoutes } from "./routes";
 import cors from "cors";
+import { createTemplates } from "./helpers";
 const port = getConfig("http:port", 5000);
 const expressApp: Express = express();
 expressApp.use(cors());
 expressApp.use(helmet());
 expressApp.use(express.json());
 expressApp.use(express.urlencoded({ extended: true }))
+expressApp.use(express.static("node_modules/bootstrap/dist"));
+createTemplates(expressApp);
 // expressApp.get("/", (req, resp) => {
 //     resp.send("Hello, SportsStore");
 // })
