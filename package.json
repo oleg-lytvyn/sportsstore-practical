@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/oleg-lytvyn/sportsstore-practical/issues"
   },
-  "homepage": "https://github.com/oleg-lytvyn/sportsstore-practical#readme"
+  "homepage": "https://github.com/oleg-lytvyn/sportsstore-practical#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
