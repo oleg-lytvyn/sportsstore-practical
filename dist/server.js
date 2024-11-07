@@ -10,6 +10,7 @@ const config_1 = require("./config");
 const routes_1 = require("./routes");
 const cors_1 = __importDefault(require("cors"));
 const helpers_1 = require("./helpers");
+const errors_1 = require("./errors");
 const port = (0, config_1.getConfig)("http:port", 5000);
 const expressApp = (0, express_1.default)();
 expressApp.use((0, cors_1.default)());
@@ -22,5 +23,6 @@ expressApp.use(express_1.default.static("node_modules/bootstrap/dist"));
 //     resp.send("Hello, SportsStore");
 // })
 (0, routes_1.createRoutes)(expressApp);
+(0, errors_1.createErrorHandlers)(expressApp);
 const server = (0, http_1.createServer)(expressApp);
 server.listen(port, () => console.log(`HTTP Server listening on port ${port}`));
