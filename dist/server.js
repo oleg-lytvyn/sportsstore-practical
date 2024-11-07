@@ -9,12 +9,15 @@ const helmet_1 = __importDefault(require("helmet"));
 const config_1 = require("./config");
 const routes_1 = require("./routes");
 const cors_1 = __importDefault(require("cors"));
+const helpers_1 = require("./helpers");
 const port = (0, config_1.getConfig)("http:port", 5000);
 const expressApp = (0, express_1.default)();
 expressApp.use((0, cors_1.default)());
 expressApp.use((0, helmet_1.default)());
 expressApp.use(express_1.default.json());
 expressApp.use(express_1.default.urlencoded({ extended: true }));
+expressApp.use(express_1.default.static("node_modules/bootstrap/dist"));
+(0, helpers_1.createTemplates)(expressApp);
 // expressApp.get("/", (req, resp) => {
 //     resp.send("Hello, SportsStore");
 // })

@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.createCatalogRoutes = void 0;
 const createCatalogRoutes = (app) => {
     app.get("/", (req, resp) => {
-        resp.send("Hello, SportsStore Route");
+        // resp.send("Hello, SportsStore Route");
+        resp.render("index");
     });
 };
 exports.createCatalogRoutes = createCatalogRoutes;
