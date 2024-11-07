@@ -1,0 +1,45 @@
+# Node.js dependencies
+/node_modules
+
+# Build output
+/dist
+
+# Optional npm cache (not necessary, but can reduce clutter)
+/npm-debug.log*
+/yarn-error.log
+/package-lock.json
+
+# Environment-specific configuration files
+/src/helpers/env.ts
+
+# OS-specific files (Linux, macOS)
+/.DS_Store
+/.AppleDouble
+/.LSOverride
+
+# VSCode configuration
+/.vscode/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE-specific settings (optional but recommended)
+/.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Coverage reports (if using any coverage tool)
+/coverage
+/coverage-final.json
+/nyc_output
+
+# Sensitive data (best practice if adding other environment files)
+/.env
