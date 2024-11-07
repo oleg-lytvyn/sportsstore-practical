@@ -23,8 +23,4 @@ expressApp.use(express_1.default.static("node_modules/bootstrap/dist"));
 // })
 (0, routes_1.createRoutes)(expressApp);
 const server = (0, http_1.createServer)(expressApp);
-server.listen(port, "0.0.0.0", () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
-// server.listen(port,
-//     () => console.log(`HTTP Server listening on port ${port}`));
+server.listen(port, () => console.log(`HTTP Server listening on port ${port}`));

@@ -18,9 +18,5 @@ createTemplates(expressApp);
 // })
 createRoutes(expressApp);
 const server = createServer(expressApp);
-server.listen(port, "0.0.0.0", () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
-
-    // server.listen(port,
-    //     () => console.log(`HTTP Server listening on port ${port}`));
+    server.listen(port,
+        () => console.log(`HTTP Server listening on port ${port}`));
